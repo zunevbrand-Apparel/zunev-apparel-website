@@ -1,141 +1,239 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zunev Apparel | Wear Your Identity</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium everyday T-shirts and Polo T-shirts from ZUNEV Apparel. Wear Your Identity.">
+  <title>ZUNEV Apparel | Wear Your Identity</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #111111;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eeeeee;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.6;
+    }
 
-        .logo {
-            font-size: 27px;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
+    header {
+      background: #111111;
+      color: #ffffff;
+      padding: 22px 18px;
+      text-align: center;
+    }
 
-        nav a {
-            color: #111111;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+    header h1 {
+      margin: 0;
+      letter-spacing: 4px;
+      font-size: 32px;
+    }
 
-        .hero {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: #f5f5f5;
-        }
+    header p {
+      margin: 4px 0 0;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
 
-        .hero h1 {
-            font-size: clamp(40px, 7vw, 76px);
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
+    nav {
+      background: #252525;
+      padding: 12px;
+      text-align: center;
+    }
 
-        .hero p {
-            font-size: 18px;
-            color: #555555;
-            margin-bottom: 30px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 14px;
+    }
 
-        .button {
-            display: inline-block;
-            background: #111111;
-            color: white;
-            padding: 15px 32px;
-            text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
+    .hero {
+      background: #eeeeea;
+      text-align: center;
+      padding: 75px 20px;
+    }
 
-        .collections {
-            padding: 65px 8%;
-            text-align: center;
-        }
+    .hero h2 {
+      font-size: 38px;
+      margin: 0 0 12px;
+      letter-spacing: 1px;
+    }
 
-        .collections h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
 
-        .collections p {
-            color: #666666;
-            line-height: 1.8;
-        }
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      margin: 6px;
+      background: #111111;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
 
-        footer {
-            background: #111111;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 13px;
-        }
+    .whatsapp {
+      background: #168447;
+    }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 18px;
-            }
+    section {
+      padding: 45px 20px;
+      text-align: center;
+    }
 
-            nav a {
-                margin: 0 8px;
-            }
-        }
-    </style>
+    section h2 {
+      margin-top: 0;
+      letter-spacing: 1px;
+    }
+
+    .collections {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .collection {
+      border: 1px solid #dddddd;
+      padding: 25px;
+      width: 260px;
+      border-radius: 5px;
+    }
+
+    .collection h3 {
+      margin-top: 0;
+    }
+
+    .contact {
+      background: #f4f4f4;
+    }
+
+    footer {
+      background: #111111;
+      color: #ffffff;
+      text-align: center;
+      padding: 22px 15px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #ffffff;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 27px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 55px 15px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .collection {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>ZUNEV</h1>
+    <p>APPAREL · WEAR YOUR IDENTITY</p>
+  </header>
 
-    <header>
-        <div class="logo">ZUNEV</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#collections">Collections</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <main>
-        <section class="hero" id="home">
-            <h1>WEAR YOUR IDENTITY.</h1>
-            <p>Discover your style. Define your statement.</p>
-            <a href="#collections" class="button">EXPLORE COLLECTIONS</a>
-        </section>
+  <main>
+    <section class="hero" id="home">
+      <h2>WEAR YOUR IDENTITY.</h2>
+      <p>Everyday essentials. Timeless style. Made for you.</p>
+      <a class="button" href="#collections">Explore Collections</a>
+      <a class="button whatsapp"
+         href="https://wa.me/919283218949"
+         target="_blank" rel="noopener noreferrer">
+        Order on WhatsApp
+      </a>
+    </section>
 
-        <section class="collections" id="collections">
-            <h2>THE ZUNEV COLLECTION</h2>
-            <p>
-                Modern style. Timeless confidence.<br>
-                Discover apparel designed to express who you are.
-            </p>
-        </section>
-    </main>
+    <section id="collections">
+      <h2>OUR COLLECTIONS</h2>
+      <p>Discover your everyday style with ZUNEV Apparel.</p>
 
-    <footer id="contact">
-        <p>&copy; 2026 Zunev Apparel. All rights reserved.</p>
-    </footer>
+      <div class="collections">
+        <div class="collection">
+          <h3>Round Neck T-Shirts</h3>
+          <p>Comfortable everyday essentials with a clean, versatile look.</p>
+          <a class="button"
+             href="https://wa.me/919283218949?text=Hello%20ZUNEV%20Apparel%2C%20I%20am%20interested%20in%20Round%20Neck%20T-shirts."
+             target="_blank" rel="noopener noreferrer">
+            Enquire Now
+          </a>
+        </div>
 
+        <div class="collection">
+          <h3>Polo T-Shirts</h3>
+          <p>A smart, versatile style for casual and semi-formal occasions.</p>
+          <a class="button"
+             href="https://wa.me/919283218949?text=Hello%20ZUNEV%20Apparel%2C%20I%20am%20interested%20in%20Polo%20T-shirts."
+             target="_blank" rel="noopener noreferrer">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>LET'S CONNECT</h2>
+      <p>Have a question about our collections? We would love to hear from you.</p>
+
+      <a class="button whatsapp"
+         href="https://wa.me/919283218949"
+         target="_blank" rel="noopener noreferrer">
+        Chat with Us on WhatsApp
+      </a>
+
+      <a class="button"
+         href="https://www.instagram.com/zunevapparel/"
+         target="_blank" rel="noopener noreferrer">
+        Follow Us on Instagram
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>ZUNEV Apparel — Wear Your Identity.</p>
+    <p>
+      <a href="https://www.instagram.com/zunevapparel/"
+         target="_blank" rel="noopener noreferrer">Instagram</a>
+      |
+      <a href="https://wa.me/919283218949"
+         target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </p>
+    <p>&copy; 2026 ZUNEV Apparel. All rights reserved.</p>
+  </footer>
 </body>
-</html>   
+</html>
