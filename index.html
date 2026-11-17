@@ -153,7 +153,38 @@
     .gallery-main { background: #f0eee8; overflow: hidden; aspect-ratio: 4/4.2; display: grid; place-items: center; }
     .gallery-main img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .gallery-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 9px; }
-    .gallery-thumbs img { width: 100%; aspect-ratio: 1/1.05; object-fit: contain; background: #f4f2ee; border: 1px solid #e7e3dc; display: block; }
+   .gallery-thumb {
+  width: 100%;
+  padding: 0;
+  border: 1px solid #e7e3dc;
+  background: #f4f2ee;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  aspect-ratio: 1/1.05;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  display: block;
+}
+
+.gallery-thumb[aria-pressed="true"] {
+  border: 2px solid var(--ink);
+  box-shadow: 0 0 0 2px rgba(23,23,23,.08);
+}
+
+.gallery-thumb:hover {
+  border-color: var(--ink);
+}
+
+.gallery-thumb:focus-visible {
+  outline: 2px solid var(--wa);
+  outline-offset: 2px;
+}
     .product-copy { min-width: 0; }
     .product-kicker { color: #77746d; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; font-weight: 700; }
     .product-copy h2 { margin: 9px 0 12px; font-size: clamp(30px, 3.4vw, 43px); line-height: 1.08; letter-spacing: -.04em; }
@@ -394,13 +425,34 @@
       <div class="container product-layout">
         <div class="product-gallery">
           <div class="gallery-main"><img src="file_0000000025148207b946d1ecb9bb9b84(1).png" alt="Grey regular fit round neck T-shirt" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';"></div>
-          <div class="gallery-thumbs" aria-label="Round neck T-shirt colour examples">
-            <img src="file_0000000025148207b946d1ecb9bb9b84(1).png" alt="Grey" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
-            <img src="file_0000000058c08208b8cab4c79e3ff561.png" alt="Yellow" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
-            <img src="file_00000000d2388243a244d8b94000ad4c.png" alt="Red" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
-            <img src="Black-tshirt.png" alt="Black" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
-            <img src="White-tshirt.png" alt="White" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
-          </div>
+          <div class="gallery-thumbs" aria-label="Select Round Neck T-shirt colour">
+
+  <button class="gallery-thumb" type="button" aria-label="Show Grey T-shirt" aria-pressed="true"
+    onclick="const g=this.closest('.product-gallery');const m=g.querySelector('.gallery-main img');const t=this.querySelector('img');m.src=t.src;m.alt=t.alt+' regular fit round neck T-shirt';g.querySelectorAll('.gallery-thumb').forEach(b=>b.setAttribute('aria-pressed','false'));this.setAttribute('aria-pressed','true');">
+    <img src="file_0000000025148207b946d1ecb9bb9b84(1).png" alt="Grey" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
+  </button>
+
+  <button class="gallery-thumb" type="button" aria-label="Show Yellow T-shirt" aria-pressed="false"
+    onclick="const g=this.closest('.product-gallery');const m=g.querySelector('.gallery-main img');const t=this.querySelector('img');m.src=t.src;m.alt=t.alt+' regular fit round neck T-shirt';g.querySelectorAll('.gallery-thumb').forEach(b=>b.setAttribute('aria-pressed','false'));this.setAttribute('aria-pressed','true');">
+    <img src="file_0000000058c08208b8cab4c79e3ff561.png" alt="Yellow" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
+  </button>
+
+  <button class="gallery-thumb" type="button" aria-label="Show Red T-shirt" aria-pressed="false"
+    onclick="const g=this.closest('.product-gallery');const m=g.querySelector('.gallery-main img');const t=this.querySelector('img');m.src=t.src;m.alt=t.alt+' regular fit round neck T-shirt';g.querySelectorAll('.gallery-thumb').forEach(b=>b.setAttribute('aria-pressed','false'));this.setAttribute('aria-pressed','true');">
+    <img src="file_00000000d2388243a244d8b94000ad4c.png" alt="Red" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
+  </button>
+
+  <button class="gallery-thumb" type="button" aria-label="Show Black T-shirt" aria-pressed="false"
+    onclick="const g=this.closest('.product-gallery');const m=g.querySelector('.gallery-main img');const t=this.querySelector('img');m.src=t.src;m.alt=t.alt+' regular fit round neck T-shirt';g.querySelectorAll('.gallery-thumb').forEach(b=>b.setAttribute('aria-pressed','false'));this.setAttribute('aria-pressed','true');">
+    <img src="Black-tshirt.png" alt="Black" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
+  </button>
+
+  <button class="gallery-thumb" type="button" aria-label="Show White T-shirt" aria-pressed="false"
+    onclick="const g=this.closest('.product-gallery');const m=g.querySelector('.gallery-main img');const t=this.querySelector('img');m.src=t.src;m.alt=t.alt+' regular fit round neck T-shirt';g.querySelectorAll('.gallery-thumb').forEach(b=>b.setAttribute('aria-pressed','false'));this.setAttribute('aria-pressed','true');">
+    <img src="White-tshirt.png" alt="White" onerror="this.onerror=null;this.src='zunev-regular-preview.jpg';">
+  </button>
+
+</div>
         </div>
         <div class="product-copy">
           <div class="product-kicker">01 / Everyday essential</div>
