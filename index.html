@@ -387,6 +387,43 @@
 }
 
 
+ /* ZUNEV MEDIA SECTION */
+.media-section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.media-section h2 {
+  margin-bottom: 15px;
+}
+
+.media-copy {
+  margin: 0 auto 28px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.media-video {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 28px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.media-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-section .button {
+  margin-top: 5px;
+} 
   </style>
 </head>
 <body>
@@ -713,6 +750,36 @@
         <a class="button" href="#collections">Explore the collections <span aria-hidden="true">→</span></a>
       </div>
     </section>
+
+<section class="media-section" id="media" aria-labelledby="media-title">
+  <div class="container">
+    <p class="eyebrow">Watch Our Story</p>
+    <h2 id="media-title">ZUNEV MEDIA</h2>
+    <p class="media-copy">
+      Our Brand. Our Identity. Our Story.
+      Discover ZUNEV Apparel and our everyday style.
+    </p>
+
+    <div class="media-video">
+      <iframe
+        src="https://www.youtube.com/embed/XBLPvITxE3s"
+        title="Introducing ZUNEV Apparel"
+        frameborder="0"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <a class="button"
+       href="https://www.youtube.com/@ZUNEVApparel"
+       target="_blank"
+       rel="noopener noreferrer">
+      Subscribe to our YouTube channel →
+    </a>
+  </div>
+</section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container">
